@@ -1,16 +1,20 @@
 import React from 'react'
-import { Container, TopBar } from "./layout";
+import { MainContainer, TopBar } from "./layout";
 import { ThemeManager } from "./themes/ThemeManager";
 import { ThemeToogle } from "./components/ThemeToggle";
+import { NotesContainer } from "./layout";
 
 function App() {
   return (
     <ThemeManager>
-      <Container>
+      <MainContainer>
         <TopBar>
           <ThemeToogle/>
         </TopBar>
-      </Container>
+        <NotesContainer>
+
+        </NotesContainer>
+      </MainContainer>
     </ThemeManager>
   )
 }
