@@ -11,7 +11,7 @@ const useTheme = () => {
     SwitchThemeContextProps
   >(() => {
     return {
-      toogleTheme: () => {
+      toggleTheme: () => {
         setTheme((t) => (t === Dark ? Light : Dark))
       },
     }

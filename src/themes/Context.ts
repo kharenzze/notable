@@ -1,7 +1,7 @@
 import { createContext } from 'react'
 
-export type SwitchThemeContextProps = {
-  toogleTheme: () => void
+interface SwitchThemeContextProps {
+  toggleTheme: () => void
 }
 
-export const SwitchThemeContext = createContext<Partial<SwitchThemeContextProps>>({})
+export const SwitchThemeContext = createContext({} as SwitchThemeContextProps)
