@@ -1,18 +1,6 @@
-import React, { FC } from 'react'
-import styled, { ThemeProvider } from 'styled-components'
-import { Dark } from '../themes'
+import styled from 'styled-components'
 
-type ContainerProps = {}
-
-export const Container: FC<ContainerProps> = ({ children }) => {
-  return (
-    <ThemeProvider theme={Dark}>
-      <ContainerDiv>{children}</ContainerDiv>
-    </ThemeProvider>
-  )
-}
-
-const ContainerDiv = styled.div`
+export const Container = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;

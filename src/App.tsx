@@ -1,13 +1,16 @@
 import React from 'react'
 import { Container, TopBar } from "./layout";
+import { ThemeManager } from "./themes/ThemeManager";
 
 function App() {
   return (
-    <Container>
-      <TopBar>
+    <ThemeManager>
+      <Container>
+        <TopBar>
 
-      </TopBar>
-    </Container>
+        </TopBar>
+      </Container>
+    </ThemeManager>
   )
 }
 
