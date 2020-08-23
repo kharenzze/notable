@@ -7,9 +7,7 @@ import { SwitchThemeContext, SwitchThemeContextProps } from './Context'
 
 const useTheme = () => {
   const [theme, setTheme] = useState<DefaultTheme>(Dark)
-  const themeContextValue: SwitchThemeContextProps = useMemo<
-    SwitchThemeContextProps
-  >(() => {
+  const themeContextValue: SwitchThemeContextProps = useMemo(() => {
     return {
       toggleTheme: () => {
         setTheme((t) => (t === Dark ? Light : Dark))
