@@ -2,7 +2,7 @@ import React, { FC, useMemo, useState } from 'react'
 import { DefaultTheme } from 'styled-components'
 import { Dark, Light } from './themes'
 import { EmptyProps } from '../common'
-import { ThemeProvider, ThemeContext as StyledContext } from 'styled-components'
+import { ThemeProvider } from 'styled-components'
 import { SwitchThemeContext, SwitchThemeContextProps } from './Context'
 
 const useTheme = () => {
