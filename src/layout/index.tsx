@@ -10,9 +10,5 @@ export const Container = styled.div`
 
 export const TopBar = styled.div`
   min-height: 20px;
-  border-bottom: ${(props) => {
-    console.log(props)
-    return 'black 2px;'
-  }};
   background: red;
 `
