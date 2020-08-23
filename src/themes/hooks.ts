@@ -1,4 +1,4 @@
 import { useContext } from 'react'
-import { ThemeContext } from './Context'
+import { SwitchThemeContext } from './Context'
 
-export const useThemeContext = useContext(ThemeContext)
+export const useSwitchThemeContext = useContext(SwitchThemeContext)

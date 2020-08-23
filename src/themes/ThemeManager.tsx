@@ -2,12 +2,14 @@ import React, { FC, useMemo, useState } from 'react'
 import { DefaultTheme } from 'styled-components'
 import { Dark, Light } from './themes'
 import { EmptyProps } from '../common'
-import { ThemeProvider } from 'styled-components'
-import { ThemeContext, ThemeContextProps } from './Context'
+import { ThemeProvider, ThemeContext as StyledContext } from 'styled-components'
+import { SwitchThemeContext, SwitchThemeContextProps } from './Context'
 
 const useTheme = () => {
   const [theme, setTheme] = useState<DefaultTheme>(Dark)
-  const themeContextValue: ThemeContextProps = useMemo<ThemeContextProps>(() => {
+  const themeContextValue: SwitchThemeContextProps = useMemo<
+    SwitchThemeContextProps
+  >(() => {
     return {
       toogleTheme: () => {
         setTheme((t) => (t === Dark ? Light : Dark))
@@ -24,8 +26,8 @@ const useTheme = () => {
 export const ThemeManager: FC<EmptyProps> = ({ children }) => {
   const { theme, themeContextValue } = useTheme()
   return (
-    <ThemeContext.Provider value={themeContextValue}>
+    <SwitchThemeContext.Provider value={themeContextValue}>
       <ThemeProvider theme={theme}>{children}</ThemeProvider>
-    </ThemeContext.Provider>
+    </SwitchThemeContext.Provider>
   )
 }
