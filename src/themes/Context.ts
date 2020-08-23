@@ -1,6 +1,6 @@
 import { createContext } from 'react'
 
-interface SwitchThemeContextProps {
+export interface SwitchThemeContextProps {
   toggleTheme: () => void
 }
 
