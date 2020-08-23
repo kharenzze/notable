@@ -9,14 +9,18 @@ export const MainContainer = styled.div`
 `
 
 export const TopBar = styled.div`
-  min-height: 20px;
-  background: ${(props) => props.theme.colors.neutralDark};
-  border-bottom: 2px solid ${(props) => props.theme.colors.black};
+  min-height: 36px;
+  padding: 0 6px;
+  background: ${(props) => props.theme.colors.neutralPrimary};
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
 `
 
 export const NotesContainer = styled.div`
   flex: 1;
   width: 100%;
   min-height: 1px;
-  background: ${(props) => props.theme.colors.neutralPrimary};
+  background: ${(props) => props.theme.colors.neutralSecondary};
 `
