@@ -22,5 +22,6 @@ export const NotesContainer = styled.div`
   flex: 1;
   width: 100%;
   min-height: 1px;
+  padding: 12px;
   background: ${(props) => props.theme.colors.neutralSecondary};
 `
