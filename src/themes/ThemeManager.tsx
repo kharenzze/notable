@@ -1,16 +1,24 @@
 import React, { FC, useMemo, useState } from 'react'
-import { DefaultTheme } from 'styled-components'
-import { Dark, Light } from './themes'
+import { DefaultTheme, ThemeProvider } from 'styled-components'
+import { Themes, ThemeType } from './themes'
 import { EmptyProps } from '../common'
-import { ThemeProvider } from 'styled-components'
 import { SwitchThemeContext, SwitchThemeContextProps } from './Context'
+import { Options } from '../Options'
 
 const useTheme = () => {
-  const [theme, setTheme] = useState<DefaultTheme>(Dark)
+  const [theme, setTheme] = useState<DefaultTheme>(() => {
+    const themeType = Options.getTheme()
+    return Themes[themeType]
+  })
   const themeContextValue: SwitchThemeContextProps = useMemo(() => {
     return {
       toggleTheme: () => {
-        setTheme((t) => (t === Dark ? Light : Dark))
+        setTheme((t) => {
+          const isDark = t === Themes[ThemeType.Dark]
+          const nextType = isDark ? ThemeType.Light : ThemeType.Dark
+          Options.setTheme(nextType)
+          return Themes[nextType]
+        })
       },
     }
   }, [setTheme])

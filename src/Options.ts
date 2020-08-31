@@ -1,10 +1,6 @@
 import store from 'store2'
 import { STORAGE_KEY } from './constants'
-
-enum ThemeType {
-  Dark = 'dark',
-  Light = 'light',
-}
+import { ThemeType } from './themes/themes'
 
 interface IOptions {
   theme: ThemeType

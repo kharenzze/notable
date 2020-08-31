@@ -1,6 +1,11 @@
 import { DefaultTheme } from 'styled-components'
 
-export const Dark: DefaultTheme = {
+export enum ThemeType {
+  Dark = 'dark',
+  Light = 'light',
+}
+
+const Dark: DefaultTheme = {
   colors: {
     themePrimary: '#8d7ec4',
     themeLighterAlt: '#060508',
@@ -27,7 +32,7 @@ export const Dark: DefaultTheme = {
   },
 }
 
-export const Light: DefaultTheme = {
+const Light: DefaultTheme = {
   colors: {
     themePrimary: '#4d4dd1',
     themeLighterAlt: '#f7f7fd',
@@ -52,4 +57,9 @@ export const Light: DefaultTheme = {
     black: '#0b0b0b',
     white: '#f2f4f7',
   },
+}
+
+export const Themes = {
+  [ThemeType.Dark]: Dark,
+  [ThemeType.Light]: Light,
 }
