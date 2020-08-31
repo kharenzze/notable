@@ -23,5 +23,7 @@ export const NotesContainer = styled.div`
   width: 100%;
   min-height: 1px;
   padding: 12px;
+  box-sizing: border-box;
   background: ${(props) => props.theme.colors.themeLight};
+  overflow-x: scroll;
 `
