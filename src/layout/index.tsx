@@ -11,7 +11,7 @@ export const MainContainer = styled.div`
 export const TopBar = styled.div`
   min-height: 36px;
   padding: 0 6px;
-  background: ${(props) => props.theme.colors.neutralPrimary};
+  background: ${(props) => props.theme.colors.themeDarker};
   display: flex;
   flex-direction: row;
   justify-content: start;
@@ -23,5 +23,5 @@ export const NotesContainer = styled.div`
   width: 100%;
   min-height: 1px;
   padding: 12px;
-  background: ${(props) => props.theme.colors.neutralSecondary};
+  background: ${(props) => props.theme.colors.themeLight};
 `
