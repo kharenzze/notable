@@ -22,12 +22,14 @@ export const useAppState = () => {
   return useState<Node[]>(getStateFromStorage)
 }
 
+const DEBOUNCE_WAIT = 3000
+
 export const useSaveOnLocalStorage = () => {
   return useCallback(
     debounce((state: Node[]) => {
       const stateString = JSON.stringify(state)
       store.set(STORAGE_KEY, stateString)
-    }),
+    }, DEBOUNCE_WAIT),
     []
   )
 }
