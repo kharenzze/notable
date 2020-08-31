@@ -10,7 +10,7 @@ import { createEditor } from "slate";
 function App() {
   const editor = useMemo(() => withReact(createEditor()), [])
   const [value, setValue] = useAppState()
-  const onChange = useCallback((next) => setValue(next), [])
+  const onChange = useCallback((next) => setValue(next), [setValue])
   return (
     <ThemeManager>
       <MainContainer>
