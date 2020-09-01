@@ -19,6 +19,9 @@ function App() {
     },
     [setValue, save]
   )
+  const onBlur = useCallback(() => {
+    save.flush()
+  }, [save])
   const renderElement = useCallback((props) => <Element {...props} />, [])
   return (
     <ThemeManager>
@@ -28,7 +31,12 @@ function App() {
         </TopBar>
         <NotesContainer>
           <Slate editor={editor} value={value} onChange={onChange}>
-            <Editable renderElement={renderElement} />
+            <Editable
+              renderElement={renderElement}
+              autoFocus
+              spellCheck
+              onBlur={onBlur}
+            />
           </Slate>
         </NotesContainer>
       </MainContainer>
