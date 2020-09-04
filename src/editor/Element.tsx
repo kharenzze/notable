@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import styled from 'styled-components'
 import { Node } from 'slate'
 
@@ -15,7 +15,7 @@ export enum ElementType {
 export const Element: React.FC<IElement> = ({ attributes, element, children }) => {
   switch (element.type) {
     case ElementType.Check:
-      return <ol {...attributes}>{children}</ol>
+      return <Check {...attributes}>{children}</Check>
     default:
       return <Paragraph {...attributes}>{children}</Paragraph>
   }
@@ -24,3 +24,11 @@ export const Element: React.FC<IElement> = ({ attributes, element, children }) =
 const Paragraph = styled.p`
   color: ${(p) => p.theme.colors.black};
 `
+
+const CheckText = styled.p`
+  color: ${(p) => p.theme.colors.black};
+`
+
+const Check: FC = ({ children, ...rest }) => {
+  return <CheckText>{children}</CheckText>
+}
