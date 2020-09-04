@@ -3,6 +3,7 @@ import { useState, useCallback } from 'react'
 import { Node } from 'slate'
 import debounce from 'lodash/debounce'
 import { DEBOUNCED_SAVE_WAIT, STORAGE_KEY } from '../constants'
+import {ElementType} from "../editor/Element";
 
 const getStateFromStorage: () => Node[] = () => {
   const state = store.get(STORAGE_KEY.STATE)
@@ -11,7 +12,7 @@ const getStateFromStorage: () => Node[] = () => {
   }
   return [
     {
-      type: 'paragraph',
+      type: ElementType.Check,
       children: [{ text: 'Type here...' }],
     },
   ]
