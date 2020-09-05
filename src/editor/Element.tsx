@@ -1,34 +1,19 @@
-import React, { FC } from 'react'
-import styled from 'styled-components'
-import { Node } from 'slate'
+import React from 'react'
+import { CustomElement, ElementType } from './elements/interfaces'
+import { Paragraph } from './elements/Paragraph'
+import { Check } from './elements/Check'
 
 interface IElement {
   attributes: any
-  element: Node
+  element: CustomElement
 }
 
-export enum ElementType {
-  Check = 'check',
-  Paragraph = 'paragraph',
+const componentByElement = {
+  [ElementType.Check]: Check,
+  [ElementType.Paragraph]: Paragraph,
 }
 
 export const Element: React.FC<IElement> = ({ attributes, element, children }) => {
-  switch (element.type) {
-    case ElementType.Check:
-      return <Check {...attributes}>{children}</Check>
-    default:
-      return <Paragraph {...attributes}>{children}</Paragraph>
-  }
-}
-
-const Paragraph = styled.p`
-  color: ${(p) => p.theme.colors.black};
-`
-
-const CheckText = styled.p`
-  color: ${(p) => p.theme.colors.black};
-`
-
-const Check: FC = ({ children, ...rest }) => {
-  return <CheckText>{children}</CheckText>
+  const Component = componentByElement[element.type]
+  return <Component {...attributes}>{children}</Component>
 }
