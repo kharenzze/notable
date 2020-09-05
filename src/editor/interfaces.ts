@@ -8,3 +8,7 @@ export enum ElementType {
 export interface CustomElement extends Element {
   type: ElementType
 }
+
+export interface BaseElementComponent {
+  element: CustomElement
+}
