@@ -1,7 +1,6 @@
 import React from 'react'
-import { CustomElement, ElementType } from './elements/interfaces'
-import { Paragraph } from './elements/Paragraph'
-import { Check } from './elements/Check'
+import { CustomElement, ElementType } from './interfaces'
+import { Paragraph, Check } from './elements'
 
 interface IElement {
   attributes: any
