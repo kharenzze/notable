@@ -1,6 +1,9 @@
-import React, { FC } from 'react'
+import React, { FC, useCallback } from 'react'
 import styled from 'styled-components'
 import { Checkbox } from '../../components/Checkbox'
+import { CustomElement } from '../interfaces'
+import { ReactEditor, useEditor } from 'slate-react'
+import { Transforms } from 'slate'
 
 const Container = styled.div.attrs({
   contentEditable: false,
@@ -13,10 +16,24 @@ const CheckText = styled.span`
   color: ${(p) => p.theme.colors.black};
 `
 
-export const Check: FC = ({ children, ...rest }) => {
+export interface ICheckElement extends CustomElement {
+  checked: boolean
+}
+
+interface ICheck {
+  element: ICheckElement
+}
+
+export const Check: FC<ICheck> = ({ children, element }) => {
+  const editor = useEditor()
+  const onClick = useCallback(() => {
+    const path = ReactEditor.findPath(editor, element)
+    const { checked } = element
+    Transforms.setNodes(editor, { checked: !checked }, { at: path })
+  }, [editor, element])
   return (
     <Container>
-      <Checkbox checked={true} />
+      <Checkbox checked={element.checked} onClick={onClick} />
       <CheckText>{children}</CheckText>
     </Container>
   )
