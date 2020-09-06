@@ -1,4 +1,6 @@
-import { DefaultTheme } from 'styled-components'
+import { DefaultTheme, ThemedStyledProps } from 'styled-components'
+
+export type DefaultThemedStyledProps<T> = ThemedStyledProps<T, DefaultTheme>
 
 export enum ThemeType {
   Dark = 'dark',
