@@ -17,7 +17,9 @@ const getColor = (p: DefaultThemedStyledProps<IContainer>) => p.theme.colors.the
 const getBorderColor = (p: DefaultThemedStyledProps<IContainer>) =>
   p.theme.colors.themePrimary
 
-const Container = styled.div`
+const Container = styled.div.attrs({
+  contentEditable: false,
+})`
   height: 14px;
   width: 14px;
   background: transparent;
