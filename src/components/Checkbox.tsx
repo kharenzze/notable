@@ -21,11 +21,16 @@ const Container = styled.div.attrs({
   contentEditable: false,
 })`
   height: 14px;
+  min-height: 14px;
+  max-height: 14px;
+  min-width: 14px;
+  max-width: 14px;
   width: 14px;
   background: transparent;
   border: 2px solid ${getBorderColor};
   position: relative;
   color: ${getColor};
+  user-select: none;
 `
 
 interface ICheckMark {
