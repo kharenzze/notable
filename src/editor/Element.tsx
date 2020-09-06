@@ -13,7 +13,7 @@ const componentByElement = {
 }
 
 export const Element: React.FC<IElement> = ({ attributes, element, children }) => {
-  const Component = componentByElement[element.type]
+  const Component = componentByElement[element.type] ?? Paragraph
   return (
     <Component {...attributes} element={element}>
       {children}
