@@ -4,6 +4,7 @@ import { Checkbox } from '../../components/Checkbox'
 import { CustomElement } from '../interfaces'
 import { ReactEditor, useEditor } from 'slate-react'
 import { Transforms } from 'slate'
+import { DefaultThemedStyledProps } from '../../themes/themes'
 
 const Container = styled.div.attrs({
   contentEditable: false,
@@ -12,8 +13,16 @@ const Container = styled.div.attrs({
   flex-direction: row;
 `
 
+interface ICheckText {
+  checked: boolean
+}
+
+const getTextDecoration = (p: DefaultThemedStyledProps<ICheckText>) =>
+  p.checked ? 'line-through' : 'none'
+
 const CheckText = styled.span`
   color: ${(p) => p.theme.colors.black};
+  text-decoration: ${getTextDecoration};
 `
 
 export interface ICheckElement extends CustomElement {
@@ -38,10 +47,13 @@ const Check_: ForwardRefRenderFunction<HTMLDivElement, ICheck> = (
     const { checked } = element
     Transforms.setNodes(editor, { checked: !checked }, { at: path })
   }, [editor, element])
+  const { checked } = element
   return (
-    <Container ref={ref}>
-      <SCheckbox checked={element.checked} onClick={onClick} />
-      <CheckText>{children}</CheckText>
+    <Container>
+      <SCheckbox checked={checked} onClick={onClick} />
+      <CheckText checked={checked} ref={ref}>
+        {children}
+      </CheckText>
     </Container>
   )
 }
