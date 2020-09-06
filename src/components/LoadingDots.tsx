@@ -2,16 +2,16 @@ import React, { FC } from 'react'
 
 export interface ILoadingDots {
   fill?: string
+  className?: string
 }
 
-export const LoadingDots: FC<ILoadingDots> = ({ fill = '#fff' }) => {
+export const LoadingDots: FC<ILoadingDots> = ({ fill = '#fff', className = '' }) => {
   return (
     <svg
-      width="120"
-      height="30"
       viewBox="0 0 120 30"
       xmlns="http://www.w3.org/2000/svg"
       fill={fill}
+      className={className}
     >
       <circle cx="15" cy="15" r="15">
         <animate

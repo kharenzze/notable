@@ -6,7 +6,6 @@ import { Slate, Editable, withReact } from 'slate-react'
 import { useAppState, useSaveOnLocalStorage } from './hooks/storageHooks'
 import { createEditor } from 'slate'
 import { Element } from './editor/Element'
-import { LoadingDots } from './components/LoadingDots'
 import { TopBar } from './AppTopBar'
 
 function App() {
