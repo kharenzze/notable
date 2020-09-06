@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
-import styled, { ThemedStyledProps, DefaultTheme } from 'styled-components'
+import styled from 'styled-components'
+import { DefaultThemedStyledProps } from '../themes/themes'
 
 interface ICheckbox {
   checked: boolean
@@ -12,10 +13,9 @@ interface IContainer {
   className?: string
 }
 
-interface IThemedContainer extends ThemedStyledProps<IContainer, DefaultTheme> {}
-
-const getColor = (p: IThemedContainer) => p.theme.colors.themeDarker
-const getBorderColor = (p: IThemedContainer) => p.theme.colors.themePrimary
+const getColor = (p: DefaultThemedStyledProps<IContainer>) => p.theme.colors.themeDarker
+const getBorderColor = (p: DefaultThemedStyledProps<IContainer>) =>
+  p.theme.colors.themePrimary
 
 const Container = styled.div`
   height: 14px;
@@ -30,9 +30,8 @@ interface ICheckMark {
   checked: boolean
 }
 
-interface IThemedCheckmark extends ThemedStyledProps<ICheckMark, DefaultTheme> {}
-
-const getDisplayCheckmark = (p: IThemedCheckmark) => (p.checked ? 'block' : 'none')
+const getDisplayCheckmark = (p: DefaultThemedStyledProps<ICheckMark>) =>
+  p.checked ? 'block' : 'none'
 
 const CheckMark = styled.span`
   display: ${getDisplayCheckmark};
