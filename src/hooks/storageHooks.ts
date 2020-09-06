@@ -43,7 +43,9 @@ export const useSaveOnLocalStorage = () => {
   )
 
   const flush = useCallback(() => {
-    debouncedSaving.flush()
+    setTimeout(() => {
+      debouncedSaving.flush()
+    }, 50)
   }, [debouncedSaving])
 
   return {
