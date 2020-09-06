@@ -25,7 +25,7 @@ interface ICheck {
 }
 
 const SCheckbox = styled(Checkbox)`
-  margin: 6px 12px 0 0;
+  margin: 3px 12px 0 0;
 `
 
 export const Check: FC<ICheck> = ({ children, element }) => {

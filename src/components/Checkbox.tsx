@@ -13,8 +13,8 @@ const getColor = (p: ThemedFn) =>
   p.checked ? p.theme.colors.themePrimary : p.theme.colors.themeDarker
 
 const Container = styled.div`
-  height: 10px;
-  width: 10px;
+  height: 14px;
+  width: 14px;
   background: ${getColor};
 `
 
