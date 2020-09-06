@@ -24,6 +24,10 @@ interface ICheck {
   element: ICheckElement
 }
 
+const SCheckbox = styled(Checkbox)`
+  margin: 6px 12px 0 0;
+`
+
 export const Check: FC<ICheck> = ({ children, element }) => {
   const editor = useEditor()
   const onClick = useCallback(() => {
@@ -33,7 +37,7 @@ export const Check: FC<ICheck> = ({ children, element }) => {
   }, [editor, element])
   return (
     <Container>
-      <Checkbox checked={element.checked} onClick={onClick} />
+      <SCheckbox checked={element.checked} onClick={onClick} />
       <CheckText>{children}</CheckText>
     </Container>
   )
