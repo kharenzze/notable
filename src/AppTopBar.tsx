@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 import styled from 'styled-components'
 import { ThemeToggle } from './components/ThemeToggle'
 import { LoadingDots } from './components/LoadingDots'
+import { DefaultThemedStyledProps } from './themes/themes'
 
 const Container = styled.div`
   min-height: 36px;
@@ -13,11 +14,21 @@ const Container = styled.div`
   align-items: center;
 `
 
-const Loading = styled(LoadingDots)`
+interface ILoading {
+  display: boolean
+}
+
+const getDisplay = (p: DefaultThemedStyledProps<ILoading>) =>
+  p.display ? 'block' : 'none'
+
+const Loading = styled(LoadingDots).attrs((p) => ({
+  fill: p.theme.colors.themeSecondary,
+}))`
   height: 30px;
   min-height: 30px;
   width: 30px;
   min-width: 30px;
+  display: ${getDisplay};
 `
 
 interface IAppTopBar {
@@ -28,7 +39,7 @@ export const TopBar: FC<IAppTopBar> = ({ saving }) => {
   return (
     <Container>
       <ThemeToggle />
-      <Loading />
+      <Loading display={saving} />
     </Container>
   )
 }
