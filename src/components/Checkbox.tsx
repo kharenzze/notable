@@ -4,7 +4,7 @@ import styled, { ThemedStyledProps, DefaultTheme } from 'styled-components'
 interface ICheckbox {
   checked: boolean
   onClick: () => void
-  className: string
+  className?: string
 }
 
 interface ThemedFn extends ThemedStyledProps<ICheckbox, DefaultTheme> {}
@@ -18,6 +18,6 @@ const Container = styled.div`
   background: ${getColor};
 `
 
-export const Checkbox: FC<ICheckbox> = ({ checked, onClick, className }) => {
+export const Checkbox: FC<ICheckbox> = ({ checked, onClick, className = '' }) => {
   return <Container checked={checked} onClick={onClick} className={className} />
 }
