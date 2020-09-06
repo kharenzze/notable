@@ -4,7 +4,7 @@ import { EmptyProps } from '../common'
 import { useSwitchThemeContext, useTheme } from '../themes/hooks'
 import { ThemeType, Themes } from '../themes/themes'
 
-export const ThemeToogle: FC<EmptyProps> = () => {
+export const ThemeToggle: FC<EmptyProps> = () => {
   const theme = useTheme()
   const { toggleTheme } = useSwitchThemeContext()
   const isLight = theme === Themes[ThemeType.Light]

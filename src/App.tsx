@@ -1,12 +1,13 @@
 import React, { useMemo, useCallback } from 'react'
-import { MainContainer, TopBar } from './layout'
+import { MainContainer } from './layout'
 import { ThemeManager } from './themes/ThemeManager'
-import { ThemeToogle } from './components/ThemeToggle'
 import { NotesContainer } from './layout'
 import { Slate, Editable, withReact } from 'slate-react'
 import { useAppState, useSaveOnLocalStorage } from './hooks/storageHooks'
 import { createEditor } from 'slate'
 import { Element } from './editor/Element'
+import { LoadingDots } from './components/LoadingDots'
+import { TopBar } from './AppTopBar'
 
 function App() {
   const editor = useMemo(() => withReact(createEditor()), [])
@@ -26,9 +27,7 @@ function App() {
   return (
     <ThemeManager>
       <MainContainer>
-        <TopBar>
-          <ThemeToogle />
-        </TopBar>
+        <TopBar saving={saving} />
         <NotesContainer>
           <Slate editor={editor} value={value} onChange={onChange}>
             <Editable
