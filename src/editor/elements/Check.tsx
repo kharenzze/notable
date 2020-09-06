@@ -1,4 +1,4 @@
-import React, { FC, useCallback } from 'react'
+import React, { forwardRef, ForwardRefRenderFunction, useCallback } from 'react'
 import styled from 'styled-components'
 import { Checkbox } from '../../components/Checkbox'
 import { CustomElement } from '../interfaces'
@@ -28,7 +28,10 @@ const SCheckbox = styled(Checkbox)`
   margin: 3px 12px 0 0;
 `
 
-export const Check: FC<ICheck> = ({ children, element }) => {
+const Check_: ForwardRefRenderFunction<HTMLDivElement, ICheck> = (
+  { children, element, ...rest },
+  ref
+) => {
   const editor = useEditor()
   const onClick = useCallback(() => {
     const path = ReactEditor.findPath(editor, element)
@@ -36,9 +39,11 @@ export const Check: FC<ICheck> = ({ children, element }) => {
     Transforms.setNodes(editor, { checked: !checked }, { at: path })
   }, [editor, element])
   return (
-    <Container>
+    <Container ref={ref}>
       <SCheckbox checked={element.checked} onClick={onClick} />
       <CheckText>{children}</CheckText>
     </Container>
   )
 }
+
+export const Check = forwardRef(Check_)
