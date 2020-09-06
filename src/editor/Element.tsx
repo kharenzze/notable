@@ -1,6 +1,6 @@
 import React from 'react'
 import { CustomElement, ElementType } from './interfaces'
-import { Paragraph, Check } from './elements'
+import { Check, Paragraph } from './elements'
 
 interface IElement {
   attributes: any
@@ -13,7 +13,8 @@ const componentByElement = {
 }
 
 export const Element: React.FC<IElement> = ({ attributes, element, children }) => {
-  const Component = componentByElement[element.type] ?? Paragraph
+  const eType = element.type ?? ElementType.Paragraph
+  const Component = componentByElement[eType]
   return (
     <Component {...attributes} element={element}>
       {children}

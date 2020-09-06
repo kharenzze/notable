@@ -6,5 +6,5 @@ export enum ElementType {
 }
 
 export interface CustomElement extends Element {
-  type: ElementType
+  type?: ElementType
 }
