@@ -10,6 +10,7 @@ import { Node } from 'slate'
 const Container = styled.div`
   display: flex;
   flex-direction: row;
+  margin-bottom: 5px;
 `
 
 interface ICheckText {
