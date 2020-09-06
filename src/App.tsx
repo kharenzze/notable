@@ -11,7 +11,7 @@ import { Element } from './editor/Element'
 function App() {
   const editor = useMemo(() => withReact(createEditor()), [])
   const [value, setValue] = useAppState()
-  const save = useSaveOnLocalStorage()
+  const { save, saving, flush } = useSaveOnLocalStorage()
   const onChange = useCallback(
     (next) => {
       setValue(next)
@@ -20,8 +20,8 @@ function App() {
     [setValue, save]
   )
   const onBlur = useCallback(() => {
-    save.flush()
-  }, [save])
+    flush()
+  }, [flush])
   const renderElement = useCallback((props) => <Element {...props} />, [])
   return (
     <ThemeManager>
