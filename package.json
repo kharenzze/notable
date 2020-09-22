@@ -46,6 +46,7 @@
     ]
   },
   "devDependencies": {
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "pushtag": "^0.1.1"
   }
 }
