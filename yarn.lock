@@ -8922,7 +8922,7 @@ punycode@^2.1.0, punycode@^2.1.1:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
-pushtag@^0.1.1:
+pushtag@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/pushtag/-/pushtag-0.1.2.tgz#1b806fb9d18faa489e9b64d93bedb4853af36dfa"
   integrity sha512-0dMI71+OC09pmaFWayjSWxKAjwaAn2LIMMytUPDb2FB5V++UbE31VL4AmilW7mpt25sR+s2ZclWlk8RfovqWXA==
