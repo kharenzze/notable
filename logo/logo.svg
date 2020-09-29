@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!-- Created with Vectornator for iOS (http://vectornator.io/) --><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" viewBox="0 0 1024 1024">
+<metadata>
+<vectornator:setting key="SnapToGrid" value="0"/>
+<vectornator:setting key="SnapToPoints" value="0"/>
+<vectornator:setting key="GuidesVisible" value="1"/>
+<vectornator:setting key="RulersVisible" value="1"/>
+<vectornator:setting key="CMYKEnabledKey" value="0"/>
+<vectornator:setting key="SnapToEdges" value="0"/>
+<vectornator:setting key="DisplayWhiteBackground" value="0"/>
+<vectornator:setting key="SnapToGuides" value="1"/>
+<vectornator:setting key="GridSpacing" value="36"/>
+<vectornator:setting key="Units" value="Pixels"/>
+<vectornator:setting key="DynamicGuides" value="0"/>
+<vectornator:setting key="New" value="1"/>
+</metadata>
+<defs>
+<linearGradient y1="508.112" id="LinearGradient" x1="-17.1539" y2="508.112" x2="1029.13" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-1.26619 -1.03785 1.45408 -0.903736 407.827 1492.45)">
+<stop stop-color="#7c6fad" offset="0"/>
+<stop stop-color="#504870" offset="0.627762"/>
+<stop stop-color="#2a263b" offset="0.99482"/>
+</linearGradient>
+</defs>
+<g id="Layer 1" vectornator:layerName="Layer 1">
+<path stroke="#000000" stroke-width="1" d="M407.98+1523.66L-916.814+437.774L603.998-507.433L1928.79+578.45L407.98+1523.66Z" fill="url(#LinearGradient)" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
+</g>
+<g id="Layer 2" vectornator:layerName="Layer 2">
+<path stroke="#000000" stroke-opacity="0" stroke-width="1" d="M478.281+100C269.367+100+100+278.804+100+499.375L100+500.625C100+721.196+269.367+900+478.281+900L521.719+900C730.633+900+900+721.197+900+500.625L900+499.375C900+278.804+730.633+100+521.719+100L478.281+100ZM268.125+230.938L651.469+231.344L651.406+299.031L711.219+299.281L710.469+701.438L710.406+734.812L710.281+788.219L710.25+788.219L710.281+788.375L372.062+786.719L372.281+699.781L650.344+701.156L651.094+299.438L336.219+299.094L336.125+614L267.969+613.969L268.062+299.031L268.031+299.031L268.062+272.906L268.094+231.062L268.125+231.062L268.125+230.938Z" fill="#ffffff" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
+</g>
+</svg>
