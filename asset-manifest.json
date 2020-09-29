@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.850ea9c0.chunk.css",
-    "main.js": "/static/js/main.a687fc43.chunk.js",
-    "main.js.map": "/static/js/main.a687fc43.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.1d3721a2.js",
-    "runtime-main.js.map": "/static/js/runtime-main.1d3721a2.js.map",
-    "static/css/2.9de2e04a.chunk.css": "/static/css/2.9de2e04a.chunk.css",
-    "static/js/2.3ea13e48.chunk.js": "/static/js/2.3ea13e48.chunk.js",
-    "static/js/2.3ea13e48.chunk.js.map": "/static/js/2.3ea13e48.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.f091fda331adc14d521b52c23b49482d.js": "/precache-manifest.f091fda331adc14d521b52c23b49482d.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.9de2e04a.chunk.css.map": "/static/css/2.9de2e04a.chunk.css.map",
-    "static/css/main.850ea9c0.chunk.css.map": "/static/css/main.850ea9c0.chunk.css.map",
-    "static/js/2.3ea13e48.chunk.js.LICENSE.txt": "/static/js/2.3ea13e48.chunk.js.LICENSE.txt",
-    "static/media/fonts.css": "/static/media/NotoSans-Regular.5a87cce8.ttf"
+    "main.css": "/notable/static/css/main.43c8d928.chunk.css",
+    "main.js": "/notable/static/js/main.0c5f6679.chunk.js",
+    "main.js.map": "/notable/static/js/main.0c5f6679.chunk.js.map",
+    "runtime-main.js": "/notable/static/js/runtime-main.4308bcc3.js",
+    "runtime-main.js.map": "/notable/static/js/runtime-main.4308bcc3.js.map",
+    "static/css/2.9de2e04a.chunk.css": "/notable/static/css/2.9de2e04a.chunk.css",
+    "static/js/2.62c64677.chunk.js": "/notable/static/js/2.62c64677.chunk.js",
+    "static/js/2.62c64677.chunk.js.map": "/notable/static/js/2.62c64677.chunk.js.map",
+    "index.html": "/notable/index.html",
+    "precache-manifest.6eb0c5b3616e75ae0cff70ad8c8eb0c2.js": "/notable/precache-manifest.6eb0c5b3616e75ae0cff70ad8c8eb0c2.js",
+    "service-worker.js": "/notable/service-worker.js",
+    "static/css/2.9de2e04a.chunk.css.map": "/notable/static/css/2.9de2e04a.chunk.css.map",
+    "static/css/main.43c8d928.chunk.css.map": "/notable/static/css/main.43c8d928.chunk.css.map",
+    "static/js/2.62c64677.chunk.js.LICENSE.txt": "/notable/static/js/2.62c64677.chunk.js.LICENSE.txt",
+    "static/media/fonts.css": "/notable/static/media/NotoSans-Regular.5a87cce8.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.1d3721a2.js",
+    "static/js/runtime-main.4308bcc3.js",
     "static/css/2.9de2e04a.chunk.css",
-    "static/js/2.3ea13e48.chunk.js",
-    "static/css/main.850ea9c0.chunk.css",
-    "static/js/main.a687fc43.chunk.js"
+    "static/js/2.62c64677.chunk.js",
+    "static/css/main.43c8d928.chunk.css",
+    "static/js/main.0c5f6679.chunk.js"
   ]
 }
