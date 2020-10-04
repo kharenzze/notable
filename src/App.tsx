@@ -9,10 +9,14 @@ import { createEditor } from 'slate'
 import { Element } from './editor/Element'
 import { TopBar } from './AppTopBar'
 import { withCheck } from './editor/withCheck'
+import { useAndroidPlugin } from "slate-android-plugin";
 
 const create = compose([withCheck, withReact, createEditor])
 
-const useEditor = () => useMemo(() => create(), [])
+const useEditor = () => {
+  const editor = useMemo(() => create(), [])
+  return useAndroidPlugin(editor)
+}
 
 function App() {
   const editor = useEditor()
